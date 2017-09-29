@@ -14,7 +14,7 @@ $ npm install -g @angular/cli
 ```
 $ git clone https://github.com/emugaya/bucketlistui.git
 ```
-4. This Creates a folder named ```bucketlist_frontend``` . Change directory to it.
+4. This Creates a folder named ```bucketlistui``` . Change directory to it.
 ```
 $ cd bucketlist_frontend
 ```
