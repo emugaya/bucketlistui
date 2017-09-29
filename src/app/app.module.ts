@@ -2,9 +2,6 @@ import { FormsModule } from '@angular/forms';
 import { Http, HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
 import {
   MatMenuModule,
   MatSidenavModule,
@@ -18,14 +15,33 @@ import {
   MatButtonModule,
   MatPaginatorModule
  } from '@angular/material';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
- import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// Services
+import { AuthGuard} from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+import { BucketlistsService } from './services/bucketlists.service';
+
+// Router
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
+// Components
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { BucketlistsComponent } from './bucketlists/bucketlists.component';
+import { ItemsComponent } from './items/items.component';
+import { AuthComponent } from './auth/auth.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    BucketlistsComponent,
+    ItemsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +59,14 @@ import { HeaderComponent } from './header/header.component';
     MatInputModule,
     MatButtonModule,
     MatPaginatorModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService,
+    BucketlistsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
