@@ -31,6 +31,8 @@ import { HeaderComponent } from './header/header.component';
 import { BucketlistsComponent } from './bucketlists/bucketlists.component';
 import { ItemsComponent } from './items/items.component';
 import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -41,7 +43,9 @@ import { AuthComponent } from './auth/auth.component';
     HeaderComponent,
     BucketlistsComponent,
     ItemsComponent,
-    AuthComponent
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
